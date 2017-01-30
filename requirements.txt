@@ -1,0 +1,5 @@
+python-dateutil
+requests
+requests_oauthlib
+jira
+PyYAML
