@@ -15,14 +15,14 @@ config_tokens = load(open('oauth_tokens.yml', 'r'))
 # connection to harvest
 
 h = harvest.Harvest('https://mev.harvestapp.com',
-                    client_id='----',#FILL IT
+                    client_id='----',# Add client ID
                     token=config_tokens['access_token'],
                     token_updater=config_tokens['refresh_token'],
                     put_auth_in_header=False)
 
 # connection to jira
 options = {'server': 'https://center.atlassian.net'}
-jira = JIRA(options=options, basic_auth=('login', 'pass'))
+jira = JIRA(options=options, basic_auth=('login', 'pass')) #Add login to JIRA
 
 
 def sync_work_log(harvest_project_code, task_jira_mask):
